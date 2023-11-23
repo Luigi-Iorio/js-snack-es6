@@ -32,10 +32,10 @@ squadre.forEach((squadra) => {
 });
 
 // nuovo arrai con solo nome e falli subiti
-const nuovoArray = squadre.map((team) => {
+const nuovoArray = squadre.map(({ nome, falli_subiti }) => {
   return {
-    nome: team.nome,
-    falli_subiti: team.falli_subiti,
+    nome,
+    falli_subiti,
   };
 });
 
