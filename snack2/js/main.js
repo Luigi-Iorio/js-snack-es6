@@ -27,14 +27,17 @@ const squadre = [
 squadre.forEach((squadra) => {
   console.log(`--- ${squadra.nome}`);
   squadra.punti_fatti = nRandom();
+  squadra.falli_subiti = nRandom();
   console.log(`Ha fatto ${squadra.punti_fatti} punti`);
 });
 
 // nuovo arrai con solo nome e falli subiti
-const nuovoArray = squadre.map((nome, falli_subiti) => ({
-  nome: nome.nome,
-  falli_subiti: nRandom(),
-}));
+const nuovoArray = squadre.map((team) => {
+  return {
+    nome: team.nome,
+    falli_subiti: team.falli_subiti,
+  };
+});
 
 // log in console
 console.log(nuovoArray);
